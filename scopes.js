@@ -209,8 +209,19 @@
 // }
 // console.log(arr);
 
+
 // sort для сортировки строк в массиве
 
+/*
 const name=['Bob','Joe','Nick','Mike']
 
-console.log(names.sort())
+console.log(names.sort())*/
+
+
+/*Возвращение в среднем данного массива округляется вниз до ближайшего целого числа.
+    Массив никогда не будет пустым.*/
+/*function getAverage(marks) {
+     return Math.floor(marks.reduce((sum, elem) => sum + elem/marks.length, 0))
+}
+getAverage([2,2,2,1])*/
+
