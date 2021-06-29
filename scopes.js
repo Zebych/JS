@@ -230,3 +230,9 @@ getAverage([2,2,2,1])*/
 function checkAlive (health) {
         return health > 0;
 }*/
+
+//Вы получаете массив чисел, возвращаете сумму всех положительных чисел.
+function positiveSum(arr) {
+ return arr.reduce((a,b)=>b>0?a+b:a,0)
+}
+positiveSum([-1,2,3,4,-5])
