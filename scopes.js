@@ -225,3 +225,8 @@ console.log(names.sort())*/
 }
 getAverage([2,2,2,1])*/
 
+//check_alive должен возвращать true, если здоровье игрока больше 0, или false, если оно равно 0 или ниже.
+/*
+function checkAlive (health) {
+        return health > 0;
+}*/
