@@ -356,9 +356,9 @@ console.log(studentsNames)
 //8a. Сформируйте строку из имён студентов, разделённых
 // - запятой (join)
 // - пробелом (join)
-let nameWithSpace = studentsNames.join(',');
+let nameWithSpace = studentsNames.join(' ');
 console.log(nameWithSpace)
-let namesWithComma = studentsNames.join(' ');
+let namesWithComma = studentsNames.join(',');
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
@@ -387,9 +387,17 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 
-//не верно решено
 const addFriends = (students) => {
-        return students.map(s => ({...s, friends: students.map(s => s.name).filter(st => st !== s.name)}))
+    const allName = students.map(s => s.name)
+
+    const newStudents = students.map(st => {
+        return {
+            ...st,
+            friends: allName.filter(name => name !== st.name)
+        }
+    })
+
+    return newStudents
 }
 console.log(addFriends(students));
 
