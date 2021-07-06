@@ -238,7 +238,7 @@ function positiveSum(arr) {
 }
 positiveSum([-1,2,3,4,-5])*/
 
-
+/*
 const students = [
     {
         name: "Bob",
@@ -399,10 +399,13 @@ const addFriends = (students) => {
 
     return newStudents
 }
-console.log(addFriends(students));
+console.log(addFriends(students));*/
 
 
+//заменить все , на -
+/*const replaceDots = (str) => str.replace(/\./g, '-');
 
+replaceDots("one.two.three")*/
 
 
 
