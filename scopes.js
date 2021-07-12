@@ -407,9 +407,15 @@ console.log(addFriends(students));*/
 
 replaceDots("one.two.three")*/
 
+// поменять число на противоположное
+// function opposite(number) {
+//     return (-number)
+// }
 
-
-
+// вернуть строку указаное число раз
+// function repeatStr (n, s) {
+//     return s.repeat(n);
+// }
 
 
 
