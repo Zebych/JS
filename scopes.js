@@ -459,218 +459,234 @@ squareSum([18,-4,-10,14,14,-4,-2,20,10])
 
 //DEEP COPY
 
-    // links to watch theory
-    // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
-    // https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
+// links to watch theory
+// https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
+// https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
 
-    // 1. Simple object
- /*   let man = {
-    name: 'John',
-    age: 28
+// 1. Simple object
+/*   let man = {
+   name: 'John',
+   age: 28
 };
 
-    let manFullCopy ={...man}	//  your code
-    man.age=82
-    console.log(man)
-    console.log(manFullCopy)
+   let manFullCopy ={...man}	//  your code
+   man.age=82
+   console.log(man)
+   console.log(manFullCopy)
 
 
-    // 2. Array of primitives
-    let numbers = [1, 2, 3];
+   // 2. Array of primitives
+   let numbers = [1, 2, 3];
 
-    let numbersFullCopy =[...numbers] //  your code
-    numbers[0]=4
-    console.log(numbers)
-    console.log(numbersFullCopy)
+   let numbersFullCopy =[...numbers] //  your code
+   numbers[0]=4
+   console.log(numbers)
+   console.log(numbersFullCopy)
 
 
-    // 3. Object inside an object
-    let man1 = {
-    name: 'John',
-    age: 28,
-    mother: {
-    name: 'Kate',
-    age: 50
+   // 3. Object inside an object
+   let man1 = {
+   name: 'John',
+   age: 28,
+   mother: {
+   name: 'Kate',
+   age: 50
 }
 };
 
-    let man1FullCopy={ ...man1,mother:{...man1.mother}}
+   let man1FullCopy={ ...man1,mother:{...man1.mother}}
 
-    man1.mother.age=18
-    console.log(man1)
-    console.log(man1FullCopy)
+   man1.mother.age=18
+   console.log(man1)
+   console.log(man1FullCopy)
 
-    // 4. Array of primitives inside an object
-    let man2 = {
-    name: 'John',
-    age: 28,
-    friends: ["Peter", "Steven", "William"]
+   // 4. Array of primitives inside an object
+   let man2 = {
+   name: 'John',
+   age: 28,
+   friends: ["Peter", "Steven", "William"]
 };
 
-    let man2FullCopy ={...man2,friends:[...man2.friends]} // your code
-    man2.friends[2]="Alex"
-    console.log(man2)
-    console.log(man2FullCopy)
+   let man2FullCopy ={...man2,friends:[...man2.friends]} // your code
+   man2.friends[2]="Alex"
+   console.log(man2)
+   console.log(man2FullCopy)
 
-    // 5 Array of objects
-    let people = [
-    {name: "Peter", age: 30},
-    {name: "Steven", age: 32},
-    {name: "William", age: 28}
-    ];
+   // 5 Array of objects
+   let people = [
+   {name: "Peter", age: 30},
+   {name: "Steven", age: 32},
+   {name: "William", age: 28}
+   ];
 
 
-    let peopleFullCopy =people.map(p=>({...p})) // your code
-    people[2].age=18
-    console.log(people)
-    console.log(peopleFullCopy)
+   let peopleFullCopy =people.map(p=>({...p})) // your code
+   people[2].age=18
+   console.log(people)
+   console.log(peopleFullCopy)
 
-    // 6 Array of objects inside object
-    let man3 = {
-    name: 'John',
-    age: 28,
-    friends: [
+   // 6 Array of objects inside object
+   let man3 = {
+   name: 'John',
+   age: 28,
+   friends: [
 {name: "Peter", age: 30},
 {name: "Steven", age: 32},
 {name: "William", age: 28}
-    ]
+   ]
 };
 
-    let man3FullCopy={...man3,friends:man3.friends.map(f=>({...f}))} //  your code
-    man3.friends[2].age=18
-    console.log(man3)
-    console.log(man3FullCopy)
+   let man3FullCopy={...man3,friends:man3.friends.map(f=>({...f}))} //  your code
+   man3.friends[2].age=18
+   console.log(man3)
+   console.log(man3FullCopy)
 
-    // 7 Object inside an object, inside an object
-    let man4 = {
-    name: 'John',
-    age: 28,
-    mother: {
-    name: "Kate",
-    age: 50,
-    work: {
-    position: "doctor",
-    experience: 15
+   // 7 Object inside an object, inside an object
+   let man4 = {
+   name: 'John',
+   age: 28,
+   mother: {
+   name: "Kate",
+   age: 50,
+   work: {
+   position: "doctor",
+   experience: 15
 }
 }
 };
 
-    let man4FullCopy={...man4,mother:{...man4.mother,work:{...man4.mother.work}}} //  your code
-    man4.mother.work.experience=51
-    console.log(man4)
-    console.log(man4FullCopy)
+   let man4FullCopy={...man4,mother:{...man4.mother,work:{...man4.mother.work}}} //  your code
+   man4.mother.work.experience=51
+   console.log(man4)
+   console.log(man4FullCopy)
 
-    // 8 Array of objects inside object -> object
-    let man5 = {
-    name: 'John',
-    age: 28,
-    mother: {
-    name: "Kate",
-    age: 50,
-    work: {
-    position: "doctor",
-    experience: 15
+   // 8 Array of objects inside object -> object
+   let man5 = {
+   name: 'John',
+   age: 28,
+   mother: {
+   name: "Kate",
+   age: 50,
+   work: {
+   position: "doctor",
+   experience: 15
 },
-    parents: [
+   parents: [
 {name: "Kevin", age: 80},
 {name: "Jennifer", age: 78},
-    ]
+   ]
 }
 };
 
-    let man5FullCopy={...man5,mother:{...man5.mother,work:{...man5.mother.work},parents:[man5.mother.parents.map(p=>({...p}))]}} //  your code
-    man5.mother.work.experience=51
-    man5.mother.parents[1].age=18
-    console.log(man5)
-    console.log(man5FullCopy)
+   let man5FullCopy={...man5,mother:{...man5.mother,work:{...man5.mother.work},parents:[man5.mother.parents.map(p=>({...p}))]}} //  your code
+   man5.mother.work.experience=51
+   man5.mother.parents[1].age=18
+   console.log(man5)
+   console.log(man5FullCopy)
 
-    // 9 Object inside an object -> array -> object ->  object
-    let man6 = {
-    name: 'John',
-    age: 28,
-    mother: {
-    name: "Kate",
-    age: 50,
-    work: {
-    position: "doctor",
-    experience: 15
+   // 9 Object inside an object -> array -> object ->  object
+   let man6 = {
+   name: 'John',
+   age: 28,
+   mother: {
+   name: "Kate",
+   age: 50,
+   work: {
+   position: "doctor",
+   experience: 15
 },
-    parents: [
+   parents: [
 {
-    name: "Kevin",
-    age: 80,
-    favoriteDish: {
-    title: "borscht"
+   name: "Kevin",
+   age: 80,
+   favoriteDish: {
+   title: "borscht"
 }
 },
 {
-    name: "Jennifer",
-    age: 78,
-    favoriteDish: {
-    title: "sushi"
+   name: "Jennifer",
+   age: 78,
+   favoriteDish: {
+   title: "sushi"
 }
 },
-    ]
+   ]
 }
 };
 
-    let man6FullCopy ={...man6,mother:{...man6.mother,work:{...man6.mother.work},
-    parents:man6.mother.parents.map(p=>({...p,favoriteDish:{...p.favoriteDish}}))}} //  your code
+   let man6FullCopy ={...man6,mother:{...man6.mother,work:{...man6.mother.work},
+   parents:man6.mother.parents.map(p=>({...p,favoriteDish:{...p.favoriteDish}}))}} //  your code
 
-    man6.mother.work.experience=51
-    man6.mother.parents[0].favoriteDish.title="coffee"
+   man6.mother.work.experience=51
+   man6.mother.parents[0].favoriteDish.title="coffee"
 
-    console.log(man6)
-    console.log(man6FullCopy)
+   console.log(man6)
+   console.log(man6FullCopy)
 
-    //10 Array of objects inside an object -> object -> array -> object ->  object
-    let man7 = {
-    name: 'John',
-    age: 28,
-    mother: {
-    name: "Kate",
-    age: 50,
-    work: {
-    position: "doctor",
-    experience: 15
+   //10 Array of objects inside an object -> object -> array -> object ->  object
+   let man7 = {
+   name: 'John',
+   age: 28,
+   mother: {
+   name: "Kate",
+   age: 50,
+   work: {
+   position: "doctor",
+   experience: 15
 },
-    parents: [
+   parents: [
 {
-    name: "Kevin",
-    age: 80,
-    favoriteDish: {
-    title: "borscht",
-    ingredients: [
+   name: "Kevin",
+   age: 80,
+   favoriteDish: {
+   title: "borscht",
+   ingredients: [
 {title: "beet", amount: 3},
 {title: "potatoes", amount: 5},
 {title: "carrot", amount: 1},
-    ]
+   ]
 }
 },
 {
-    name: "Jennifer",
-    age: 78,
-    favoriteDish: {
-    title: "sushi",
-    ingredients: [
+   name: "Jennifer",
+   age: 78,
+   favoriteDish: {
+   title: "sushi",
+   ingredients: [
 {title: "fish", amount: 1},
 {title: "rise", amount: 0.5}
-    ]
+   ]
 }
 },
-    ]
+   ]
 }
 };
 
-    let man7FullCopy={...man7,mother:{...man7.mother, work:{...man7.mother.work},
-    parents:man7.mother.parents.map(p=>({...p,favoriteDish:{...p.favoriteDish,
-    ingredients:p.favoriteDish.ingredients.map(i=>({...i}))}}))}} //  your code
+   let man7FullCopy={...man7,mother:{...man7.mother, work:{...man7.mother.work},
+   parents:man7.mother.parents.map(p=>({...p,favoriteDish:{...p.favoriteDish,
+   ingredients:p.favoriteDish.ingredients.map(i=>({...i}))}}))}} //  your code
 
-    man7.mother.work.experience=115
-    man7.mother.parents[0].favoriteDish.ingredients[0].amount=33
+   man7.mother.work.experience=115
+   man7.mother.parents[0].favoriteDish.ingredients[0].amount=33
 
-    console.log(man7)
-    console.log(man7FullCopy)
+   console.log(man7)
+   console.log(man7FullCopy)
 */
 
 
+//ф-ия принимает число,преобразовывает число в строку.разбивает каждое число на отдельный эл массива.меняет порядок на обратныйюпреобразовывает в числа
+/*function digitize(n) {
+
+    console.log(String(n).split('').reverse().map(Number))
+}
+digitize(348597)*/
+
+//ф-ия принимает неотрицательное число и возвращает его отсортированным по возрастанию
+function descendingOrder(n) {
+
+    console.log(
+        parseInt(String(n).split('').sort().reverse().join(''))
+    )
+}
+
+descendingOrder(123456789) //Output: 54421
