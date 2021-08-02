@@ -682,11 +682,57 @@ squareSum([18,-4,-10,14,14,-4,-2,20,10])
 digitize(348597)*/
 
 //ф-ия принимает неотрицательное число и возвращает его отсортированным по возрастанию
-function descendingOrder(n) {
+// function descendingOrder(n) {
+//
+//     console.log(
+//         parseInt(String(n).split('').sort().reverse().join(''))
+//     )
+// }
+//
+// descendingOrder(123456789) //Output: 54421
 
-    console.log(
-        parseInt(String(n).split('').sort().reverse().join(''))
-    )
+
+//# сумма всех чисел перебором  до n -рекурсией с замыканием
+// function sumTo(n){
+//     if(n===1)return n
+//     return n+ sumTo(n-1)
+// }
+//
+// console.log(sumTo(100))
+
+// Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
+// и что бы корректно работали следующие вызовы:
+// 1) superSum(0) //0
+// 2) superSum(3)(2)(5)(3) //10
+// 3) superSum(3)(2)(5,3) //10
+// 4) superSum(3)(2,5,3) //10
+// 5) superSum(3)(2,5)(3) //10
+// 6) superSum(3)(2,5)(3,9) //10
+
+// P.S. типизируйте только аргументы, а при вызове функции используйте @ts-ignore
+/*
+function superSum(num) {
+    if (num <= 0) return 0
+    if (num === 1) return (n) => n
+
+    let acc = []
+
+    function helper(...args) {
+        acc = [...acc, ...args]
+        if (acc.length >= num) {
+            acc.length = num
+            return acc.reduce((acc, number) => acc + number)
+        } else {
+            return helper
+        }
+    }
+
+    return helper
 }
 
-descendingOrder(123456789) //Output: 54421
+console.log(superSum(0) )//0
+console.log(superSum(3)(2)(5)(3)) //10
+console.log(superSum(3)(2)(5, 3) )//10
+console.log(superSum(3)(2, 5, 3) )//10
+console.log(superSum(3)(2, 5)(3) )//10
+console.log(superSum(3)(2, 5)(3, 9)) //10*/
