@@ -736,3 +736,25 @@ console.log(superSum(3)(2)(5, 3) )//10
 console.log(superSum(3)(2, 5, 3) )//10
 console.log(superSum(3)(2, 5)(3) )//10
 console.log(superSum(3)(2, 5)(3, 9)) //10*/
+
+
+//достать по одному элементу из двух массивов и вывести в третьем массиве
+/*let a = [1, 2, 3, 4]
+let b = [3, 4, 5, 6]
+
+/!*function filterArr(a, b) {
+    let argA = a.reduce((acc, res) => acc === 3 ? acc : res)
+    let argB = b.reduce((acc, res) => acc === 4 ? acc : res)
+    let arg=[argA,argB]
+return console.log(arg)
+}*!/
+
+function filterArr(a, b) {
+    return console.log([a.find((arg) => arg === 3), b.find((arg) => arg === 4)])
+    /!*let argA = a.find((arg) => arg === 3)
+    let argB = b.find((arg) => arg === 4)
+    let arg = [argA, argB]
+    return console.log(arg)*!/
+}
+filterArr(a, b)//=>[3,4]*/
+
