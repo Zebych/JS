@@ -758,3 +758,34 @@ function filterArr(a, b) {
 }
 filterArr(a, b)//=>[3,4]*/
 
+//функция принимает два параметра 1-два массива с данными 2-массив с данными.Функция должна удалить удалить элементы
+// из 1 параметра которые присутствуют во втором сохроняя очередность
+/*
+arrayDiff(([1, 8, 2], []), [1, 8, 2]), "a was [1,8,2], b was []"
+
+function arrayDiff(a, b) {
+   return a.filter(e => !b.includes(e))
+}*/
+// ф-ия принимает два параметра 1-массив с данными(цифры,строки) 2-сравниваемое значение
+//вернуть true/false в зависимости от -есть ли в массиве такой же елемент как 2
+/*
+const check = (a, x) => a.includes(x)
+console.log(check([1,5,6,8],7))*/
+
+//посчитать количество true в массиве
+/*
+let  array1 = [true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true ];
+
+function countSheeps(arrayOfSheep) {
+    let are=arrayOfSheep.filter(sh=>sh===true)
+    return are.length
+}
+countSheeps(array1)*/
+/*function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+}*/
