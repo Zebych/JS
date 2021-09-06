@@ -785,7 +785,20 @@ function countSheeps(arrayOfSheep) {
     let are=arrayOfSheep.filter(sh=>sh===true)
     return are.length
 }
+
+//сортировать в нужном порядке
 countSheeps(array1)*/
 /*function countSheeps(arrayOfSheeps) {
     return arrayOfSheeps.filter(Boolean).length;
+}*/
+/*function fixTheMeerkat(arr) {
+    return arr.reverse()
+    }*/
+/*const fixTheMeerkat = ([tail, body, head]) => [head, body, tail]
+console.log(fixTheMeerkat(["bottom", "middle", "top"]))*/
+
+//убрать пробелы из строки
+/*
+function noSpace(x){
+    return x.split(' ').join('')
 }*/
