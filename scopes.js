@@ -802,3 +802,49 @@ console.log(fixTheMeerkat(["bottom", "middle", "top"]))*/
 function noSpace(x){
     return x.split(' ').join('')
 }*/
+/*
+function twoSort(s) {
+    return s.sort()[0].split('').join('***');
+}
+console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))//b***i***t***c***o***i***n*/
+
+/*function check(a, x) {
+    const yes= a.find(f=>f===x)
+    return yes ? true:false
+}
+function check(a, x) {
+  return (a.includes(x))
+}
+console.log(check(['t', 'e', 's', 't'], 'e'), true)*/
+
+//Вернуть массив, где первый элемент - это количество положительных чисел, а второй элемент - сумма отрицательных чисел.
+// Если входной массив пуст или равен нулю, вернуть пустой массив.
+/*function countPositivesSumNegatives(input) {
+  const sumOfNegativeNumber=  input.reduce((acc,el)=> el<0 ?  acc+el:acc,0)
+    const positiveLength=input.filter(i=>i>0)
+    return (input===null ||input.length===0)? []: [positiveLength.length,sumOfNegativeNumber]
+
+
+}*/
+/*function countPositivesSumNegatives(input) {
+  return (input===null ||input.length===0)? []:[input.filter(i=>i>0).length,input.reduce((acc,el)=> el<0 ?  acc+el:acc,0)]
+}*/
+/*
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))*/
+
+
+// Учитывая массив целых чисел в виде строк и чисел, верните сумму значений массива, как если бы все они были числами.
+//     Верните свой ответ в виде числа.
+/*
+function sumMix(x){
+    return x.map(Number).reduce((acc,el)=>acc+el,0)
+}
+
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7], 42))*/
+
+//Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на «0», а любую цифру от 5 и выше на «1». Верните полученную строку.
+function fakeBin(x){
+    return [x.split('')]/*.map(x=>x<5 ? 0:1)*/.map(int => parseInt(int, 10))
+}
+
+console.log(fakeBin('45385593107843568'), '01011110001100111')
