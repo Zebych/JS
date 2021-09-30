@@ -843,8 +843,59 @@ function sumMix(x){
 console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7], 42))*/
 
 //Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на «0», а любую цифру от 5 и выше на «1». Верните полученную строку.
-function fakeBin(x){
-    return [x.split('')]/*.map(x=>x<5 ? 0:1)*/.map(int => parseInt(int, 10))
-}
+// function fakeBin(x){
+//     return [x.split('')]/*.map(x=>x<5 ? 0:1)*/.map(int => parseInt(int, 10))
+// }
 
-console.log(fakeBin('45385593107843568'), '01011110001100111')
+// console.log(fakeBin('45385593107843568'), '01011110001100111')
+
+
+// Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+// for (let i = 0; i < 3; i++) {
+//   alert( `number ${i}!` );
+// }
+// let i=0
+// while(i<3){
+// console.log(`number ${i}!` );
+// i++
+// }
+
+//Повторять цикл, пока ввод неверен
+// let num
+// do{
+//     num=+prompt('enter the number')
+// }while(num<=100 && num)
+
+//Вывести простые числа
+// let n = 10;
+// nextPrime:
+// for (let i = 2; i <= n; i++) { // Для всех i...
+
+//   for (let j = 2; j < i; j++) { // проверить, делится ли число..
+//     if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+//   }
+//   console.log(i); // простое число
+// }
+
+// function sum(n){
+//     let sum1=0
+//     for(let i=n;i>0;i--){
+//         sum1 +=i
+//     }
+//     return sum1
+// }
+
+// console.log(sum(5)) 
+
+//Вычислить факториал рекурсия
+// function factorial(n){
+//     if (n === 1) return n;
+//     return n*factorial(n-1)
+// }
+// console.log(factorial(5));
+
+//Числа Фибоначчи
+// function fib(n) {
+//     return n <= 1 ? n : fib(n - 1) + fib(n - 2)
+// }
+// console.log(fib(7));
