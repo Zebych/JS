@@ -899,3 +899,75 @@ console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7], 42))*/
 //     return n <= 1 ? n : fib(n - 1) + fib(n - 2)
 // }
 // console.log(fib(7));
+
+//В качестве аргумента вы получаете любую карту. Ваша задача - вернуть масть этой карты.
+/*
+function defineSuit(card) {
+    let num
+    card.length === 2 ? num = 1 : num = 2
+    switch (card[num]) {
+        case '♣':
+            return 'clubs'
+        case '♦':
+            return 'diamonds'
+        case '♥':
+            return 'hearts'
+        case '♠':
+            return 'spades'
+        default:
+            return card
+    }
+}
+
+console.log(defineSuit('3♣'));
+console.log(defineSuit('Q♠'));
+console.log(defineSuit('9♦'));
+console.log(defineSuit('J♥'));
+
+function defineSuit(card) {
+    const s = {
+        "♣": "clubs",
+        "♠": "spades",
+        "♦": "diamonds",
+        "♥": "hearts"
+    }
+    return s[card.charAt(card.length - 1)]
+}*/
+
+// калькулятор лет
+/*function calculateAge(birth, year) {
+    if (birth > year) {
+        if((birth - year)===1){
+            return `You will be born in ${birth - year} year.`
+        }
+        return `You will be born in ${birth - year} years.`
+    } else if (birth < year) {
+        if((year - birth)===1){
+            return `You are ${year - birth} year old.`
+        }
+        return `You are ${year - birth} years old.`
+    }
+    return "You were born this very year!"
+}
+console.log(calculateAge(2016, 2012))*/
+
+// поочередное сравнение элементов двух массивов
+
+/*
+function checkExam(array1, array2) {
+    const reducer = (a, e, idx) => {
+        if (e === "") {
+            return a;
+        }
+
+        if (e === array1[idx]) {
+            return a += 4;
+        }
+
+        return --a;
+    }
+    const score = array2.reduce(reducer, 0);
+    return score < 0 ? 0 : score;
+}
+//checkExam = (x, y) => (x = y.reduce((s, e, i) => s + (e === x[i] ? 4 : e === '' ? 0 : -1), 0)) > 0 ? x : 0;
+console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]))// 6*/
