@@ -1,4 +1,4 @@
-// 1 Функции
+// 1 Функции Function Declaration и Function Expression отличаются тем что к Declaration можно обращаться до объявления ф-ии
 // Function Declaration
 // function greet(name) {
 //   console.log('Привет - ', name)
@@ -43,14 +43,14 @@ const pow2 = num => num ** 2
 // console.log(pow2(5))
 
 // 4 Параметры по умолчанию
-const sum = (a = 40, b = a * 2) => a + b
+const sum = (a = 40, b = a * 2) => a + b//по умолчанию используются если при вызове ф-ии не переданы значения
 
 // console.log(sum(41, 4))
 // console.log(sum())
 
-function sumAll(...all) {
+function sumAll(...all) {// ...-спрет оператор формирует копию входящих данных и возвращает массив
     let result = 0
-    for (let num of all) {
+    for (let num of all) {// новый синтаксис цикла for
         result += num
     }
     return result
@@ -59,7 +59,7 @@ function sumAll(...all) {
 const res = sumAll(1, 2, 3, 4, 5)
 // console.log(res)
 
-// 5 Замыкания
+// 5 Замыкания используются для определения приватных данных
 function createMember(name) {
     return function(lastName) {
         console.log(name + lastName)
@@ -67,5 +67,6 @@ function createMember(name) {
 }
 
 const logWithLastName = createMember('Vladilen')
-console.log(logWithLastName('Minin'))
-console.log(logWithLastName('Kuznezov'))
+console.log(logWithLastName)//ƒ (lastName) { console.log(name + lastName)}
+console.log(logWithLastName('Minin'))//undefined
+console.log(logWithLastName('Kuznezov'))//undefined

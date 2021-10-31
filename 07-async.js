@@ -4,13 +4,13 @@
 //   console.log('After timeout')
 // }, 2500)
 //
-// clearTimeout(timeout)
+// clearTimeout(timeout)// для остановки работы таймаута
 //
 // const interval = setInterval(() => {
 //   console.log('After timeout')
 // }, 1000)
 //
-// // clearInterval(interval)
+// // clearInterval(interval)// для остановки работы таймаута
 
 // const delay = (callback, wait = 1000) => {
 //   setTimeout(callback, wait)
@@ -18,7 +18,7 @@
 //
 // delay(() => {
 //   console.log('After 2 seconds')
-// }, 2000)
+// }, 2000)// вызов функции содержащей таймаут
 
 
 const delay = (wait = 1000) => {

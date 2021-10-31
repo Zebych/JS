@@ -1,13 +1,15 @@
-const heading = document.getElementById('hello')
-// const heading2 = document.getElementsByTagName('h2')[0]
-// const heading2 = document.getElementsByClassName('h2-class')[0]
-// const heading2 = document.querySelector('.h2-class')
-// const heading2 = document.querySelector('#sub-hello') // Всегда 1 элемент
-const heading2 = document.querySelector('h2')
+//DOM
+
+const heading = document.getElementById('hello')//обратиться к элементу по его id
+// const heading2 = document.getElementsByTagName('h2')[0]// обратиться к элементам по названию тега
+// const heading2 = document.getElementsByClassName('h2-class')[0]// обратиться по классу(вешается на тег как id
+// const heading2 = document.querySelector('.h2-class')// обратиться к тегу через присвоеный ему класс
+// const heading2 = document.querySelector('#sub-hello') // Всегда 1 элемент// обратиться к тегу через присвоеный id
+const heading2 = document.querySelector('h2')// обращение к тегу по присвоеному сss стилю
 
 
 // const heading3 = heading2.nextElementSibling
-const h2List = document.querySelectorAll('h2')
+const h2List = document.querySelectorAll('h2')//обращает к множеству элементов
 const heading3 = h2List[h2List.length - 1]
 
 
@@ -60,7 +62,7 @@ heading.onclick = () => {
 }
 
 
-heading2.addEventListener('dblclick', () => {
+heading2.addEventListener('dblclick', () => {// добавляет событие слушателя
     if (heading2.style.color === 'yellow') {
         heading2.style.color = '#000'
         heading2.style.backgroundColor = '#fff'
