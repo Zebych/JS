@@ -1,8 +1,8 @@
 const cars = ['Мазда', 'Форд', 'БМВ', 'Мерседс']
 const people = [
-  {name: 'Vladilen', budget: 4200},
-  {name: 'Elena', budget: 3500},
-  {name: 'Victoria', budget: 1700}
+    {name: 'Vladilen', budget: 4200},
+    {name: 'Elena', budget: 3500},
+    {name: 'Victoria', budget: 1700}
 ]
 const fib = [1, 1, 2, 3, 5, 8, 13]
 
@@ -45,7 +45,7 @@ function addItemToEnd() {
 // })
 // console.log(index)// найдет индекс элемента массива в котором произойдет совпадение условия
 
-//FIND
+// FIND
 // const person = people.find(function(person) {
 //   return person.budget === 3500
 // })
@@ -53,8 +53,15 @@ function addItemToEnd() {
 // const person1 = people.find(person => person.budget === 3500)// упрощенный вариант использования стрелочной ф-ии(лямда ф-ия)
 // console.log(person1)
 
-//INCLUDES
+//Функции предекаты(возвращают true/false)
+// INCLUDES
 // console.log(cars.includes('Мазда!'))// проверяет на наличие значения в массиве возвращает true/false
+// SOME
+// console.log(cars.some(c=>c==='Мазда!'))// проверяет на наличие значения в массиве или объекте возвращает true/false
+// EVERY
+// console.log(cars.some(с=>c.length>2))// проверяет на заданное условие все элементы массива возвращает true/false,
+// если хоть один элемент не соответствует вернет false
+
 
 //MAP
 // const upperCaseCars = cars.map(car => {// проходит по всем элементам массива и приводит каждый элемент к верхнему регистру
@@ -96,3 +103,20 @@ const allBudget = people1
 console.log(allBudget)
 
 // const displayItems = allItems.filter(item => item.name.indexOf('phone') !== -1)
+
+//перекинуть элементы массива с добавлением свойств в объект
+let names = ['tanya', 'valera', 'lena']
+let a1 = names.reduce((acc, el) => {
+    acc[el] = 'hey'
+    return acc// чтобы прошел по всем элементам массива
+}, {})
+console.log(a1)//{tanya:'hey',valera:'hey',lena:'hey'}
+
+//forEach
+//перекинуть элементы массива с добавлением свойств в объект
+let a = {}
+let names1 = ['tanya', 'valera', 'lena']
+names1.forEach((el) => {
+    a[el] = 'hey'
+})
+console.log(a)//{tanya:'hey',valera:'hey',lena:'hey'}

@@ -50,3 +50,6 @@ const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!
 
 console.log(output)
 console.log(output2)
+
+//INDEXOF-вернет индекс первого попавшегося совпадения с которого начинается заданная строка
+console.log("SDSSFSD sasha gdfg".indexOf("sasha"));//8

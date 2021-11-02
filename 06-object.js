@@ -20,6 +20,8 @@ const person = {
 // console.log(person['complex key'])
 // person.greet()
 //
+//SOME
+// console.log(cars.some('Мазда!'))// проверяет на наличие значения в массиве или объекте возвращает true/false
 // person.age++
 // person.languages.push('by')//  добавить новый элемент в массив находящийся в объекте
 // // person['key_4'] = undefined// удалить значение
@@ -92,3 +94,21 @@ const logger = {
 // logger.keysAndValues.call(person)// call как и bind но сразу  вызывает созданную ф-ию
 logger.withParams.call(person, true, true, true)
 logger.withParams.apply(person, [true, true, true])// тот же call только принимает максимум два параметра
+
+//ГЛУБОКОЕ КОПИРОВАНИЕ С ИЗМЕНЕНИЕМ ДАННЫХ
+let state={
+    address:{
+        streets:[
+            {name:"yo"},//поменять на {name:"Привет"}
+            {name:"yoYoYo"},
+        ],
+        city:{value:"Vladimir"}
+    },
+    age:{value:34}
+}
+let newState={
+    ...state,address:{...state.address,streets: state.address.streets.map(s=>{
+        if(s.name==="yo")return {...s,name:"Привет"}
+        return s
+        })}
+}

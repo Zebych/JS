@@ -111,6 +111,11 @@ let arrPeople = [{age: 18, sex: "f", name: "Sveta"}, {age: 34, sex: "m", name: "
     name: "Lena"
 },]
 console.log(arrPeople.filter(el => el.age >= 18 && el.sex === "f"));//пропускаем на вечеринку только девочек("f")18+
+//FILTER+MAP+добавить новое свойство
+console.log(arrPeople.filter(u=>u.age>18).map(u=>({...u,passed:true})))
+//0: {age: 34, sex: 'm', name: 'Dima', passed: true}
+// 1: {age: 25, sex: 'f', name: 'Lena', passed: true}
+
 
 //REDUCE- пробигает по всему массиву и возвращает какое то одно обобщенное значение(примитив,массив,объект)
 cityArr.reduce((acc, el) => {
@@ -148,3 +153,14 @@ function bubbleSort(arr) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function solve(...s) {
+    /*    console.log(  s[0].reduce((acc,el)=>{
+            el===el.toLowerCase() && ++acc
+            return acc
+        },0))*/
+    let lower = s.filter((s) => s !== s.toUpperCase())
+    console.log(lower)/*.length>(s.length/2))?s.toLowerCase():s.toLowerCase()*/
+}
+
+// solve("code")//lower[0].length
+solve("CODe")//(lower[0].length>(s[0].length/2))?s[0].toLowerCase():s[0].toLowerCase()

@@ -61,7 +61,7 @@ const res = sumAll(1, 2, 3, 4, 5)
 
 // 5 Замыкания используются для определения приватных данных
 function createMember(name) {
-    return function(lastName) {
+    return function (lastName) {
         console.log(name + lastName)
     }
 }
@@ -70,3 +70,22 @@ const logWithLastName = createMember('Vladilen')
 console.log(logWithLastName)//ƒ (lastName) { console.log(name + lastName)}
 console.log(logWithLastName('Minin'))//undefined
 console.log(logWithLastName('Kuznezov'))//undefined
+
+//BIND CALL APPLAY 06-object.js(59 const logger = {)
+
+// const bound = logger.keys.bind(person)// bind- создает новую функцию которую можно вызывать
+// bound()
+// logger.keysAndValues.call(person)// call как и bind но сразу  вызывает созданную ф-ию
+// logger.withParams.call(person, true, true, true)
+// logger.withParams.apply(person, [true, true, true])// тот же call только принимает максимум два параметра
+
+//забаиндить функцию на объект
+let man = {lastName: 'Забиров'}
+
+function hello(firstName, age) {
+    console.log(firstName + this.lastName + age)
+}
+const hello2 = hello.bind(man)
+const hello3 = hello.bind(man, "Сашка")
+hello2("Cанёк", 34)
+hello3(34)
