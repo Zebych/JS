@@ -112,7 +112,7 @@ let arrPeople = [{age: 18, sex: "f", name: "Sveta"}, {age: 34, sex: "m", name: "
 },]
 console.log(arrPeople.filter(el => el.age >= 18 && el.sex === "f"));//пропускаем на вечеринку только девочек("f")18+
 //FILTER+MAP+добавить новое свойство
-console.log(arrPeople.filter(u=>u.age>18).map(u=>({...u,passed:true})))
+console.log(arrPeople.filter(u => u.age > 18).map(u => ({...u, passed: true})))
 //0: {age: 34, sex: 'm', name: 'Dima', passed: true}
 // 1: {age: 25, sex: 'f', name: 'Lena', passed: true}
 
@@ -153,14 +153,28 @@ function bubbleSort(arr) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function solve(...s) {
-    /*    console.log(  s[0].reduce((acc,el)=>{
-            el===el.toLowerCase() && ++acc
-            return acc
-        },0))*/
-    let lower = s.filter((s) => s !== s.toUpperCase())
-    console.log(lower)/*.length>(s.length/2))?s.toLowerCase():s.toLowerCase()*/
+//вычислить разницу между объемом одного массива и объемом второго
+const findDifference = (a, b) => Math.abs(b.reduce((acc, el) => acc * el) - a.reduce((acc, el) => acc * el))
+console.log(findDifference([3, 2, 5], [1, 4, 4]));
+
+//заменить букву в строке по заданному принципу
+function DNAtoRNA(dna) {
+    return dna.replace(/T/g, 'U')// если в строке есть буква 'T' она будет заменена на 'U'
+    //или
+    // const arr=dna.split('')
+    // do{
+    //     const index= arr.indexOf('T')
+    //     arr[index]='U'
+    // } while (arr.some(c=>c==='T'))
+    //
+    // return arr.join('')
+}
+console.log(DNAtoRNA("GCAT"));
+console.log(DNAtoRNA("TTTT"));
+
+//
+function array(arr){
+    return arr.split(",").slice(1,-1).join(" ") || null;
 }
 
-// solve("code")//lower[0].length
-solve("CODe")//(lower[0].length>(s[0].length/2))?s[0].toLowerCase():s[0].toLowerCase()
+console.log(array('1,2,3'))//, '2'

@@ -15,7 +15,7 @@ function addItemToEnd() {
 // cars.push('Рено')// добавляет значение в конец массива
 // cars.unshift('Волга')// добавляет значение в начало массива
 //
-// const firstCar = cars.shift()//удаляет первый элемент массива
+// const firstCar = cars.shift()//удаляет первый элемент массива(забрать)
 // const lastCar = cars.pop()//удаляет последний элемент массива
 // console.log(firstCar)
 // console.log(lastCar)
@@ -27,6 +27,7 @@ function addItemToEnd() {
 // const index = cars.indexOf('БМВ')//находит индекс по значению,если значение не найдено вернет -1
 // cars[index] = 'Porsche'//присваивает по индексу новое значение
 // console.log(cars)
+//.slice(1, -3)// возвращает новый массив, содержащий копию части исходного массива.минус указывает на отсчет с конца
 
 //поиск с использованием цикла
 // let findedPerson

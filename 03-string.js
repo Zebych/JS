@@ -53,3 +53,9 @@ console.log(output2)
 
 //INDEXOF-вернет индекс первого попавшегося совпадения с которого начинается заданная строка
 console.log("SDSSFSD sasha gdfg".indexOf("sasha"));//8
+
+//   REPLACE- изменение символов в строке
+function DNAtoRNA(dna) {
+    return dna.replace(/T/g, 'U')// если в строке есть буква 'T' она будет заменена на 'U'
+}
+console.log(DNAtoRNA("GCAT"));
