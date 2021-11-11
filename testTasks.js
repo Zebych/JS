@@ -169,12 +169,15 @@ function DNAtoRNA(dna) {
     //
     // return arr.join('')
 }
+
 console.log(DNAtoRNA("GCAT"));
 console.log(DNAtoRNA("TTTT"));
 
 //
-function array(arr){
-    return arr.split(",").slice(1,-1).join(" ") || null;
+function array(arr) {
+    return arr.split(",").slice(1, -1).join(" ") || null;
 }
 
 console.log(array('1,2,3'))//, '2'
+
+//
