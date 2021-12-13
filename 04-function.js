@@ -85,7 +85,9 @@ let man = {lastName: 'Забиров'}
 function hello(firstName, age) {
     console.log(firstName + this.lastName + age)
 }
+
 const hello2 = hello.bind(man)
 const hello3 = hello.bind(man, "Сашка")
 hello2("Cанёк", 34)
 hello3(34)
+

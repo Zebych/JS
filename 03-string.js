@@ -29,6 +29,11 @@ const string = '     password      '
 // console.log(string.trimLeft())//обрезает пробелы слева от значения
 // console.log(string.trimRight())//обрезает пробелы с
 
+// удалить из строки все гласные находящиеся в нижнем регистре
+function shortcut(string){
+    return string.replace(/[aeiou]/g,'')
+}
+console.log(shortcut('hello'));
 
 //написание строк с использованием функции что позволяет изменять строку
 function logPerson(s, name, age) {

@@ -180,4 +180,33 @@ function array(arr) {
 
 console.log(array('1,2,3'))//, '2'
 
+//вывести массив чисел
+const reverseSeq = (n) => {
+    let arr=[]
+    while (n>0){
+        arr.push(n)
+        n--    }
+ return arr;
+};
+console.log(reverseSeq(5));
+//или
+// const reverseSeq = n => {
+// let arr = [];
+//   for (let i=n; i>0; i--) {
+//     arr.push(i);
+//     } return arr;
+// };
+
 //
+function yearDays(year)/*?*/
+{
+    let num=Math.abs(year) /* ? */
+    let str=year.toString()
+    if(year===0 )return '0 has 366 days'
+    if(str.endsWith("00") && year > 0) return `${year} has 365 days`
+    if(str.endsWith("00") && year < 0) return `${year} has 366 days`
+    if((num%4)===0) return `${year} has 366 days`
+    return `${year} has 365 days`
+}
+
+console.log(yearDays(1800))
