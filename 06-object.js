@@ -112,3 +112,69 @@ let newState={
         return s
         })}
 }
+
+// избавиться от дублированных чисел в массиве-вывести только те что не дублируются
+/*const arr = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9]
+
+function withoutRepeat(array) {
+    const testValue = []
+    const obj = {}
+    for (let i = 0; i < array.length; i++) {
+        const currentItem = array[i]
+        if (!(currentItem in obj)) {
+            obj[currentItem] = 1
+        } else {
+            obj[currentItem] += 1
+        }
+    }
+    const keys = Object.keys(obj)
+    keys.forEach(key => {
+        if (obj[key] === 1) {
+            testValue.push(key)
+        }
+    })
+    return testValue
+}
+
+console.log(withoutRepeat(arr))*/
+
+// посчитать разницу между первыми элементами массива и вторыми
+/*
+function number(busStops) {
+    const passengersAtEachStop = {}
+    for (let i = 0; i < busStops.length; i++) {
+        const index = busStops[i]
+        passengersAtEachStop[index] = index[0]-index[1]
+    }
+    const values = Object.values(passengersAtEachStop)
+
+    return values.reduce((acc, el) => {
+        return acc + Number(el)
+    }, 0)
+}
+
+console.log(number([[55, 0], [93, 15], [3, 41], [55, 6], [32, 82], [44, 45], [83, 90], [83, 44], [90, 74], [84, 137], [7, 42], [80, 2]]))*/
+
+// посчитать укладывается ли по времени в 24 часа
+//через объект
+/*function determineTimeObject(durations) {
+    const travelTime = {}
+    for (let i = 0; i < durations.length; i++) {
+        const index = durations[i]
+        const splitIndex = index.split(":")
+        const timeNum = splitIndex.map((clockValues) => {
+            return Number(clockValues)
+        })
+        const secondsInHours = timeNum[0] * Math.pow(60, 2)
+        const secondsToMinutes = timeNum[1] * 60
+        travelTime[index] = secondsInHours + secondsToMinutes + timeNum[2]
+    }
+    const timeValues = Object.values(travelTime)
+    const allTime = timeValues.reduce((acc, time) => {
+        return acc + time
+    }, 0)
+    const whatIsDeadline = 24 * Math.pow(60, 2)
+    return allTime <= whatIsDeadline;
+}
+
+console.log(determineTimeObject(["06:00:00", "12:00:00", "06:30:00"]))*/

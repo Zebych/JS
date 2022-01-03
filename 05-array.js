@@ -75,6 +75,14 @@ function addItemToEnd() {
 // const pow2Fib = fib.map(pow2).map(Math.sqrt)
 // console.log(pow2Fib)
 
+//SET- возвращает объект индивидуальных данных массива(если были дублирующиеся данные в массиве возвращает их один раз)
+// const arr = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9]
+// function set(array){
+//     return new Set(array)
+// }
+//
+// console.log(set(arr))//Set { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+
 //FILTER
 // const pow2 = num => num ** 2
 // const pow2Fib = fib.map(pow2)
@@ -207,10 +215,23 @@ let dataAxios = [
 const pushObj = () => {
     state.data = dataAxios.map((d) => {
         const index = state.imgArr.find(i => i.id === d.id)
-        return  (d = {...d, photo: index.photo})
+        return (d = {...d, photo: index.photo})
     })
     console.log(state.data)
 
 }
 pushObj(state, dataAxios)
+
+//посчитать укладывается ли в сутки
+function determineTimeArray(durations) {
+    let sec = 0;
+    let str = [];
+    for (let i = 0; i < durations.length; i++) {
+        str = durations[i].split(":");
+        sec += +str[0] * 3600 + +str [1] * 60 + +str[2];
+    }
+    return sec / 3600 <= 24;
+}
+
+console.log(determineTimeArray(["06:00:00", "12:00:00", "06:30:00"]))
 
