@@ -228,6 +228,7 @@ function determineTimeArray(durations) {
     let str = [];
     for (let i = 0; i < durations.length; i++) {
         str = durations[i].split(":");
+        console.log(str)
         sec += +str[0] * 3600 + +str [1] * 60 + +str[2];
     }
     return sec / 3600 <= 24;

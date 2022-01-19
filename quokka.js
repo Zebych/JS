@@ -63,5 +63,28 @@ function withoutRepeat(array) {
 
 console.log(withoutRepeat(arr))*/
 
+//найти факториал заданного числа
+/*const factorial = (n) => {
+    if(n===0)return 1
+    if(n===1)return 1
+    return n*factorial(n-1)
+};
+console.log(factorial(3));*/
 
+//найти число жизненного пути
+function lifePathNumber(dateOfBirth) {
+    let [year, month, day] = dateOfBirth.split("-")
+    year = sum(String(year).split("").map(Number))
+    month = sum(String(month).split("").map(Number))
+    day = sum(String(day).split("").map(Number))
+    return sum([year,month,day])
+}
 
+function sum(arr) {
+    if (arr.length === 1) return +arr[0]
+    let total = arr.reduce((s, n) => s + n)
+    if (total < 10) return total
+    return sum(String(total).split("").map(Number))
+}
+
+console.log(lifePathNumber("1987-01-05"))
