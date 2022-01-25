@@ -58,3 +58,36 @@ async function asyncExample() {
 }
 
 asyncExample()
+
+
+//react-hook-form
+/*const useMyForm=()=>{
+    return{
+        register:(name)=>{
+            return{name}
+        },
+        handleSubmit:(callBack)=>{
+            return (e)=>{
+                e.preventDefault()
+            }
+        }
+
+    }
+}
+const myReactHookForm=()=>{
+    const { register,handleSubmit, formstate:{errors}}=useForm()
+
+        return  <form onSubmit={handleSubmit(onSubmit)}>
+
+        <input {...register("email")}/>
+    <button> submit</button>
+
+</form>
+}*/
+
+/*const { register,handleSubmit, formstate:{errors}}=useForm()
+<form onSubmit={handleSubmit(onSubmit)}>
+
+    <input {...register("email")}/>
+<button> submit</button>
+</form>*/

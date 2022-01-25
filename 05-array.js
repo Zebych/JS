@@ -6,10 +6,10 @@ const people = [
 ]
 const fib = [1, 1, 2, 3, 5, 8, 13]
 
-// Function
-function addItemToEnd() {
-
-}
+//проверка на массив
+// if(Array.isArray(fib)){
+//     console.log('true');
+// }
 
 // Method
 // cars.push('Рено')// добавляет значение в конец массива
