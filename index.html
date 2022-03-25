@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Lesson 5</title>
-	<h1 id="hello" class="heading">Hello World</h1>
-	<h2 id="sub-hello" class="h2-class">This is</h2>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Lesson 5</title>
+    <!--    <h1 id="hello" class="heading">Hello World</h1>-->
+    <!--    <h2 id="sub-hello" class="h2-class">This is</h2>-->
 </head>
 <body>
-	
-	<script src="this.ts"></script>
+
+<a class="popup-open" href="#">Открыть popup</a>
+
+<div class="popup-fade">
+    <div class="popup">
+        <!--   <a class="popup-close" href="#">Закрыть</a>-->
+
+        <div class="slider-container">
+            <div class="arrow-left">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="arrow-right">
+                <div class="arrow-bg">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="slider-track">
+
+                <div class="slider-item">
+                    <img src="images/download.png" alt="image1" class="img">
+                </div>
+                <div class="slider-item">
+                    <img src="images/jquery.png" alt="image1" class="img">
+                </div>
+                <div class="slider-item">
+                    <img src="images/cartoon-29082015-006.jpg" alt="image1" class="img">
+                </div>
+                <div class="slider-item">
+                    <img src="images/listochkinNew-01.png" alt="image1" class="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./slider/slider.js"></script>
 </body>
 </html>
+<!--           <script>
+                               window.onload = function() {
+                                   let photos = new Array(2);
+                                   photos[0]="images/download.png";
+                                   photos[1]="images/jquery.png";
+
+                                   let alts = new Array(2);
+                                   alts[0]="картинка 1";
+                                   alts[1]="картинка 2";
+
+                                   for (let i = 0; i < 2; i++)
+                                   {
+                                       document.write('<img src="' + photos[i] + '" alt="' + alts[i] + '" >' );
+                                   }
+                               }
+                           </script>-->

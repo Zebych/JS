@@ -72,7 +72,7 @@ console.log(withoutRepeat(arr))*/
 console.log(factorial(3));*/
 
 //найти число жизненного пути
-function lifePathNumber(dateOfBirth) {
+/*function lifePathNumber(dateOfBirth) {
     let [year, month, day] = dateOfBirth.split("-")
     year = sum(String(year).split("").map(Number))
     month = sum(String(month).split("").map(Number))
@@ -87,4 +87,18 @@ function sum(arr) {
     return sum(String(total).split("").map(Number))
 }
 
-console.log(lifePathNumber("1987-01-05"))
+console.log(lifePathNumber("1987-01-05"))*/
+let data=[{id:1},{id:2},{id:3}]
+let id=2
+const lessonId = data.find((lesson)=> lesson.id === id)
+console.log(data)
+console.log(lessonId)
+console.log(id)
+
+const lessonData = await axiosInstance.get(`/teacher/schedules/`);
+const schedule = lessonData.data.find((les) => {
+    console.log(les)
+    return les.id === parseInt(id)
+})
+const scheduleId = String(schedule.class_room.id)
+debugger
